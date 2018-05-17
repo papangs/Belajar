@@ -1,0 +1,63 @@
+<zk>
+    <window apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('Aplikasi_Human_Resource.viewModel.Usulan_Dan_KenaikanVM')">
+        <groupbox>
+            <vlayout>
+                <grid width="auto">
+                    <columns>
+                        <column align="right" hflex="min"/>
+                        <column/>
+                    </columns>
+                    <rows>
+                        <row>
+                            <cell sclass="row-title">Nama Anda :</cell>
+                            <cell>
+                                <textbox id="nama" width="300px" value="@bind(vm.nama)"/>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell sclass="row-title">Jabatan :</cell>
+                            <cell>
+                                <textbox id="jabatan" width="200px" value="@bind(vm.jabatan)"/>
+                            </cell>
+                        </row>
+                    </rows>
+                </grid>
+
+                <hlayout style="text-align:center;margin:5px 5px 5px 5px">
+                    <button label="Save" image="/Image/if_insert-object_23421.png" sclass="button"
+                            onClick="@command('save')"/>
+                    <button id="btnUpdate" label="Udate" image="/Image/if_system-software-update_24350.png"
+                            sclass="button"/>
+                    <button id="btnRefresh" label="Refresh" image="/Image/if_refresh red_10514.png" sclass="button"/>
+                </hlayout>
+
+            </vlayout>
+
+        </groupbox>
+
+        <separator/>
+        <grid>
+            <columns menupopup="auto">
+                <column label="No" sort="auto"/>
+                <column label="Nama" sort="auto"/>
+                <column label="Action" sort="auto"/>
+            </columns>
+            <rows>
+                <row>
+                    <label value="1"/>
+                    <label value="Irawan"/>
+                    <cell>
+                        <button label="Edit" sclass="button"/>
+                        .
+                        <button label="Delete" sclass="button"/>
+                        .
+                        <button label="Detail" sclass="button"/>
+                    </cell>
+
+                </row>
+            </rows>
+
+        </grid>
+    </window>
+</zk>

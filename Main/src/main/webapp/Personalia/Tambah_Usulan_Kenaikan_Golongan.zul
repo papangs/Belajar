@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">   
+    
+    <window title="Membuat Usulan" closable="true" border="normal" width="30%" apply="">
+        <groupbox>
+            <vlayout>
+                <grid width="auto">
+                    <columns>
+                        <column align="right" hflex="min"/>
+                        <column/>
+                    </columns>
+                    <rows>
+                        <row>
+                            <cell sclass="row-title">Tanggal Kenaikan (TMT) : </cell>
+                            <cell>
+                                <datebox id="tglnaik" constraint="no future" width="200px"/>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell sclass="row-title">Daftar Gaji : </cell>
+                            <cell>
+                                <listbox id="dftrgaji" mold="select" width="200px">
+                                    <template name="model">
+                                        <listitem label="${each}" />
+                                    </template>
+                                </listbox>
+                            </cell>
+                        </row>
+                    </rows>
+                </grid>
+                
+                <separator />
+                
+                <hlayout style="text-align:center;">
+                    <button id="btnAdd" label="INSERT" image="/Image/if_insert-object_23421.png" sclass="button"/>
+                    <button id="btnUpdate" label="UPDATE" image="/Image/if_system-software-update_24350.png" sclass="button"/>
+                    <button id="btnRefresh" label="REFRESH" image="/Image/if_refresh red_10514.png" sclass="button"/>
+                </hlayout>
+                
+                <separator />
+                
+            </vlayout>
+        
+        </groupbox>
+    </window>
+    
+</zk>

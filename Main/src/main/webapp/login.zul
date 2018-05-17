@@ -1,0 +1,75 @@
+<!--<zk xmlns:w="client" xmlns:n="native" xmlns="http://www.zkoss.org/2005/zul">-->
+    <!--<window title="Login" border="normal" width="400px" height="250px" apply="org.zkoss.bind.BindComposer"-->
+            <!--viewModel="@id('vm') @init('Aplikasi_Human_Resource.viewModel.Login')">-->
+        <!--&lt;!&ndash;<style src="/widgets/styleLogin.css" />&ndash;&gt;-->
+        <!--<div sclass="login1">-->
+            <!--&lt;!&ndash; <image sclass="logoheader" src="/images/logo2.png" width = "99%"/> &ndash;&gt;-->
+            <!--Username-->
+            <!--<textbox value="@bind(vm.username)" width="99%"/>-->
+            <!--Password-->
+            <!--<textbox value="@bind(vm.password)" type="password" width="99%"/>-->
+            <!--<html>-->
+                <!--<hr/>-->
+            <!--</html>-->
+            <!--<div>-->
+                <!--<button onClick="@command('logIn')" label="Submit" zclass="btn-primary"/>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</window>-->
+<!--</zk>-->
+
+
+<zk xmlns:w="client" xmlns:n="native" xmlns="http://www.zkoss.org/2005/zul">
+<?link rel="shortcut icon" type="image/x-icon" href="/img/tirtanadi1_0aQ_icon.ico"?>
+<?link rel="icon" type="image/x-icon" href="/img/tirtanadi1_0aQ_icon.ico"?>
+<window border="normal" width="300px" position="center" mode="overlapped" apply="org.zkoss.bind.BindComposer"
+        viewModel="@id('vm') @init('Aplikasi_Human_Resource.viewModel.Login')">
+    <style>
+        body {
+        padding:0;
+        background: #ffffff url('${labels.app.background}');
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        }
+    </style>
+    <!--<html:form action="" method="" xmlns:html="native">-->
+        <grid>
+            <columns>
+                <column height="80px" style="background:url('img/splash-fbis.png')" sclass="btn" >
+                    <image width="65px" height="60px" src="${labels.app.logo}" ></image>
+                    <label style="font-weight:bold; font-size:14px;">Login user</label>
+                </column>
+            </columns>
+        </grid>
+        <grid>
+            <columns>
+                <column width="100px" />
+                <column />
+            </columns>
+            <rows>
+                <row>
+                    <label value="Username" />
+                    <textbox id="txtUsername" name="j_username" focus="true" value="@bind(vm.username)" />
+                </row>
+                <row>
+                    <label value="Password" />
+                    <textbox id="p" type="password" name="j_password" value="@bind(vm.password)"/>
+                </row>
+                <row>
+                    <label />
+                    <hbox>
+                        <button type="submit" label="Masuk" onClick="@command('logIn')"/>
+                        <button type="reset" label="Reset" />
+                    </hbox>
+                </row>
+                <row>
+                    <cell colspan="2">
+                        <!--<label style="color:red;" if="${not empty SPRING_SECURITY_LAST_EXCEPTION}"-->
+                               <!--value="${SPRING_SECURITY_LAST_EXCEPTION.message}"></label>-->
+                    </cell>
+                </row>
+            </rows>
+        </grid>
+    <!--</html:form>-->
+</window>
+</zk>

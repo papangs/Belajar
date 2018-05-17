@@ -1,0 +1,293 @@
+<!--<zk>-->
+<!--<window apply="org.zkoss.bind.BindComposer"-->
+<!--viewModel="@id('vm')@init('Aplikasi_Human_Resource.viewModel.MainViewModel')"-->
+<!--validationMessages="@id('vmsgs')">-->
+<!--<hlayout>today is <label value="@load(vm.answer)" /></hlayout>-->
+<!--<button label="ask" onClick="@command('cmd')"/>-->
+<!--</window>-->
+<!--</zk>-->
+
+
+<zk>
+    <style>
+        body { padding: 0 0;}
+    </style>
+    <style src="/css/bootstrap.css"/>
+    <?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+    <?link rel="shortcut icon" type="image/x-icon" href="/img/tirtanadi1_0aQ_icon.ico"?>
+    <?link rel="icon" type="image/x-icon" href="/img/tirtanadi1_0aQ_icon.ico"?>
+    <window id="winWorkspace" title="" border="none"
+            apply="org.zkoss.bind.BindComposer"
+            viewModel="@id('vm') @init('Aplikasi_Human_Resource.viewModel.MainViewModel')"
+            width="100%" height="100%">
+        <borderlayout width="100%" height="100%">
+            <north height="118px" sclass="banner">
+                <div>
+                    <!--<div style="float:right; margin-top:40px; margin-right:10px;">-->
+                        <!--<hbox>-->
+                            <!--<vbox>-->
+                                <!--<label id="lblUserInfo" style="color: #FFFFFF;font-size:14px;font-weight:bold;" value="aaasasas" />-->
+                                <!--<label id="lblJabatan" style="color: #FFFFFF;font-size:12px;" value="sasaas" />-->
+                            <!--</vbox>-->
+                        <!--</hbox>-->
+                    <!--</div>-->
+
+                    <div style="float:right; margin-top:10px; margin-right:5px;">
+                        <textbox value="@bind(vm.search)" width="220px"/>
+                        <button label="Search" onClick="@command('search')"/>
+
+                        <hbox style="margin-top:5px">
+                            <vbox>
+                                <label id="lblUserInfo" style="color: #FFFFFF;font-size:14px;font-weight:bold;" value="Irawan Papang Subakti"/>
+                                <label id="lblJabatan" style="color: #FFFFFF;font-size:12px;" value="Manager Utama"/>
+                            </vbox>
+                        </hbox>
+                    </div>
+
+                    <image src="${labels.app.logo1}" style="margin:5px;"/>
+
+
+
+                    <div>
+                        <menubar id="menubar" width="100%" style="margin-top:5px;">
+                            <menuitem label="Home" onClick="alert(self.label)"/>
+                            <menu label="Personalia">
+                                <menupopup>
+                                    <menu label="Biodata Pegawai">
+                                        <menupopup>
+                                            <menuitem label="Document" onClick="alert(self.label)"/>
+                                            <menuitem label="Spreadsheet" onClick="alert(self.label)"/>
+                                            <menuitem label="Presentation" onClick="alert(self.label)"/>
+                                        </menupopup>
+                                    </menu>
+                                    <menu label="Kehadiran dan Cuti">
+                                        <menupopup>
+                                            <menuitem label="Document" onClick="alert(self.label)"/>
+                                            <menuitem label="Spreadsheet" onClick="alert(self.label)"/>
+                                            <menuitem label="Presentation" onClick="alert(self.label)"/>
+                                        </menupopup>
+                                    </menu>
+                                    <menu label="Penilaian">
+                                        <menupopup>
+                                            <menuitem label="Document" onClick="alert(self.label)"/>
+                                            <menuitem label="Spreadsheet" onClick="alert(self.label)"/>
+                                            <menuitem label="Presentation" onClick="alert(self.label)"/>
+                                        </menupopup>
+                                    </menu>
+                                    <menu label="Permohonan">
+                                        <menupopup>
+                                            <menuitem label="Document" onClick="alert(self.label)"/>
+                                            <menuitem label="Spreadsheet" onClick="alert(self.label)"/>
+                                            <menuitem label="Presentation" onClick="alert(self.label)"/>
+                                        </menupopup>
+                                    </menu>
+                                    <menu label="Kesejahteraan">
+                                        <menupopup>
+                                            <menuitem label="Document" onClick="alert(self.label)"/>
+                                            <menuitem label="Spreadsheet" onClick="alert(self.label)"/>
+                                            <menuitem label="Presentation" onClick="alert(self.label)"/>
+                                        </menupopup>
+                                    </menu>
+                                    <menuseparator></menuseparator>
+                                    <menuitem label="Pemberhentian" onClick="alert(self.label)"/>
+                                    <menuitem label="Surat lamaran" onClick="alert(self.label)"/>
+                                    <menuitem label="Pengumuman" onClick="alert(self.label)"/>
+                                    <menuitem label="Pengaturan" onClick="alert(self.label)"/>
+                                </menupopup>
+                            </menu>
+                            <menu label="Manajerial">
+                                <menupopup>
+                                    <menuitem disabled="true" label="Penilaian"/>
+                                    <menu label="PKP/DP3/KPI/GCG">
+                                        <menupopup>
+                                            <menuitem label="Document" onClick="alert(self.label)"/>
+                                            <menuitem label="Spreadsheet" onClick="alert(self.label)"/>
+                                            <menuitem label="Presentation" onClick="alert(self.label)"/>
+                                        </menupopup>
+                                    </menu>
+                                    <menuitem disabled="true" label="Kepegawaian"/>
+                                    <menu label="Analisa Kebutuhan Pegawai">
+                                        <menupopup>
+                                            <menuitem label="Document" onClick="alert(self.label)"/>
+                                            <menuitem label="Spreadsheet" onClick="alert(self.label)"/>
+                                            <menuitem label="Presentation" onClick="alert(self.label)"/>
+                                        </menupopup>
+                                    </menu>
+                                    <menu label="Mutasi/Promosi/Rotasi/Demosi">
+                                        <menupopup>
+                                            <menuitem label="Document" onClick="alert(self.label)"/>
+                                            <menuitem label="Spreadsheet" onClick="alert(self.label)"/>
+                                            <menuitem label="Presentation" onClick="alert(self.label)"/>
+                                        </menupopup>
+                                    </menu>
+                                    <menu label="Laporan Bulanan">
+                                        <menupopup>
+                                            <menuitem label="Document" onClick="alert(self.label)"/>
+                                            <menuitem label="Spreadsheet" onClick="alert(self.label)"/>
+                                            <menuitem label="Presentation" onClick="alert(self.label)"/>
+                                        </menupopup>
+                                    </menu>
+                                </menupopup>
+                            </menu>
+                            <menu label="Peng. SDM">
+                                <menupopup>
+                                    <menuitem disabled="true" label="SPPD"/>
+                                    <menuitem label="SPPD" onClick="alert(self.label)"/>
+                                    <menuitem label="Rekapitulasi Biaya Perjalanan Dinas" onClick="alert(self.label)"/>
+                                    <menuitem disabled="true" label="PENGATURAN SPPD"/>
+                                    <menuitem label="Pengaturan Mata Uang" onClick="alert(self.label)"/>
+                                    <menuitem label="Pengaturan SPPD" onClick="alert(self.label)"/>
+                                    <menuitem disabled="true" label="PELATIHAN"/>
+                                    <menuitem label="Pelatihan In-House" onClick="alert(self.label)"/>
+                                    <menuitem disabled="true" label="PRNDIDIKAN INFORMAL"/>
+                                    <menuitem label="Menambah Data Pendidikan Informal" onClick="alert(self.label)"/>
+                                    <menuitem label="Setting Pendidikan Informal" onClick="alert(self.label)"/>
+                                    <menuitem label="Data Fungsionaris" onClick="alert(self.label)"/>
+                                    <menuitem label="Administrasi PKL/Magang" onClick="alert(self.label)"/>
+                                </menupopup>
+                            </menu>
+                            <menuitem disabled="true" label="User Privileges" style="float:right"/>
+                            <menuitem label="Log Off" onClick="alert(self.label)" style="float:right"/>
+                            <menu label="Akun" style="float:right">
+                                <menupopup>
+                                    <menuitem label="Ubah password" onClick="alert(self.label)"/>
+                                    <menuseparator/>
+                                    <menuitem label="Biodata Saya" onClick="alert(self.label)"/>
+                                    <menuitem label="Inbox" onClick="alert(self.label)"/>
+                                    <menuseparator/>
+                                    <menuitem label="Permohonan Cuti" onClick="alert(self.label)"/>
+                                    <menuitem label="Lihat Sisa Cuti" onClick="alert(self.label)"/>
+                                    <menuseparator/>
+                                    <menuitem label="Permohonan Menjadi Tanggunga Perusahaan"
+                                              onClick="alert(self.label)"/>
+                                    <menuitem label="Permohonan Penyesuaian Ijazah" onClick="alert(self.label)"/>
+                                    <menuitem label="Pemberitahuan dn Persetujuan Pernikahan"
+                                              onClick="alert(self.label)"/>
+                                    <menuitem label="Permohonan Klaim Pengganyian Lensa Kacamata / Gigi Palsu"
+                                              onClick="alert(self.label)"/>
+                                    <menuitem label="Surat Pernyataan Tenaga Kontrak" onClick="alert(self.label)"/>
+                                    <menuitem label="Permohonan Masa Persiapan Pensiun" onClick="alert(self.label)"/>
+                                    <menuseparator/>
+                                    <menuitem label="Master Data" onClick="alert(self.label)"/>
+                                </menupopup>
+                            </menu>
+                            <menuitem label="Log In" href="login.zul" style="float:right"/>
+                        </menubar>
+                    </div>
+
+                </div>
+
+            </north>
+
+            <west flex="true" collapsible="true" splittable="true" width="250px">
+                <tree id="tree" apply="" multiple="true" height="100%" style="overflow-y:auto">
+                    <treecols sizable="true">
+                        <treecol label="Menu"/>
+                    </treecols>
+                    <treechildren>
+                        <treeitem id="Kenaikan" label="Kenaikan Gaji dan Golongan">
+                            <treechildren>
+                                <treeitem label="Usulan Kenaikan Golongan">
+                                    <attribute name="onClick">
+                                        <![CDATA[
+                                           Tab newTab;
+                                           if (mainTabbox.getTabs().hasFellow("Usulan Kenaikan Golongan")) {
+                                               newTab = (Tab) mainTabbox.getTabs().getFellow("Usulan Kenaikan Golongan");
+                                               mainTabbox.setSelectedTab(newTab);
+                                           } else {
+                                               newTab = new Tab("Usulan Kenaikan Golongan");
+                                               newTab.setId("Usulan Kenaikan Golongan");
+                                               newTab.setClosable(true);
+                                               newTab.setSelected(true);
+                                               Tabpanel tb = new Tabpanel();
+                                               Executions.createComponents("Personalia/Usulan_Kenaikan_Golongan.zul", tb, null);
+                                               mainTabbox.getTabs().appendChild(newTab);
+                                               mainTabbox.getTabpanels().appendChild(tb);
+                                           }
+                                           ]]>
+                                    </attribute>
+                                </treeitem>
+                                <treeitem label="Penyesuaian Ijazah">
+                                    <treechildren>
+                                        <treeitem label="Daftar Pegawai"/>
+                                        <treeitem label="Tambah Data"/>
+                                    </treechildren>
+                                </treeitem>
+                                <treeitem label="Daftar Gaji"/>
+                                <treeitem label="Daftar Pegawai Per Unit Kerja"/>
+                                <treeitem label="Pegawai PLS"/>
+                            </treechildren>
+                        </treeitem>
+
+                        <treeitem id="Penilaian" label="Penilaian">
+                            <treechildren>
+                                <treeitem label="DP3"/>
+                                <treeitem label="PKP"/>
+                                <treeitem label="KPI"/>
+                            </treechildren>
+                        </treeitem>
+                    </treechildren>
+                    <!--<treechildren>-->
+                    <!--<treeitem id="mMenu" label="Kenaikan Gaji dan Golongan" >-->
+                    <!--<treechildren>-->
+                    <!--<treeitem label="Usulan Kenaikan Golongan"/>-->
+                    <!--<treeitem label="Penyesuaian Ijazah" >-->
+                    <!--<treechildren>-->
+                    <!--<treeitem label="Sub Menu 2.1" >-->
+                    <!--<treechildren>-->
+                    <!--<treeitem label="Sub Menu 2.1.1"/>-->
+                    <!--<treeitem label="Sub Menu 2.1.2"/>-->
+                    <!--</treechildren>-->
+                    <!--</treeitem>-->
+                    <!--</treechildren>-->
+                    <!--</treeitem>-->
+                    <!--</treechildren>-->
+                    <!--</treeitem>-->
+                    <!--</treechildren>-->
+                </tree>
+            </west>
+
+            <!--<center>-->
+                <!--<tabbox vflex="1" id="mainTabbox">-->
+                    <!--<tabs id="tabsContent">-->
+                        <!--<tab label="${labels.main.dashboard}"/>-->
+                    <!--</tabs>-->
+                    <!--<tabpanels id="tabpanelsContent">-->
+                        <!--<tabpanel style="overflow:auto; background: lightblue url('${labels.app.background}') no-repeat fixed center">-->
+
+                            <!--<label value="Selamat datang di dashboard"/>-->
+                            <!--&lt;!&ndash;<window apply="com.fm.main.viewmodel.LineBasicComposer">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<charts id="chart" type="line" title="Monthly Average Temperature"&ndash;&gt;-->
+                            <!--&lt;!&ndash;subtitle="Source: WorldClimate.com" />&ndash;&gt;-->
+                            <!--&lt;!&ndash;</window>&ndash;&gt;-->
+
+                        <!--</tabpanel>-->
+                    <!--</tabpanels>-->
+                <!--</tabbox>-->
+            <!--</center>-->
+
+            <center id="centerPanel" border="normal" flex="true">
+                <tabbox width="100%" height="100%" id="mainTabbox" >
+                    <tabs>
+                        <tab image="/Image/if_go-home_118770.png">
+                            Home
+                        </tab>
+                    </tabs>
+                    <tabpanels style="overflow:auto; background: lightblue url('${labels.app.background}') no-repeat fixed center">
+                        <tabpanel >
+                            <!--<include id="centerInclude" src="Menu/Menu.zul"/>-->
+                        </tabpanel>
+                    </tabpanels>
+                </tabbox>
+            </center>
+
+            <south height="48px" sclass="footer_satu">
+                <vbox hflex="1" vflex="1" align="center">
+                    HR System © Copyright PDAM Tirtanadi Provinsi Sumatera Utara - 2018
+                    <a href="/" style="color:white;">http://www.pdamtritanadi.com</a>
+                </vbox>
+            </south>
+
+        </borderlayout>
+    </window>
+</zk>
